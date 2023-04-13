@@ -100,8 +100,8 @@ class Company(Scraper):
             employee_object['linkedin_url'] = employee_raw.find_element(By.TAG_NAME, "a").get_attribute("href")
             # print(employee_raw.text, employee_object)
             # _person = Person(
-            #     # linkedin_url = employee_raw.find_element_by_tag_name("a").get_attribute("href"),
-            #     linkedin_url = employee_raw.find_element_by_tag_name("a").get_attribute("href"),
+            #     # linkedin_url = employee_raw.find_element(By.TAG_NAME, "a").get_attribute("href"),
+            #     linkedin_url = employee_raw.find_element(By.TAG_NAME, "a").get_attribute("href"),
             #     name = (employee_raw.text.split("\n") or [""])[0].strip(),
             #     driver = self.driver,
             #     get = True,
