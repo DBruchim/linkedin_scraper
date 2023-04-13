@@ -251,7 +251,7 @@ class Company(Scraper):
         try:
             _ = WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.CLASS_NAME, 'company-list')))
             showcase, affiliated = driver.find_elements(By.CLASS_NAME, "company-list")
-            driver.find_element(By.ID,"org-related-companies-module__show-more-btn").click()
+            driver.find_element(By.ID, "org-related-companies-module__show-more-btn").click()
 
             # get showcase
             for showcase_company in showcase.find_elements(By.CLASS_NAME, "org-company-card"):
@@ -303,7 +303,7 @@ class Company(Scraper):
 
         # get showcase
         try:
-            driver.find_element(By.ID,"view-other-showcase-pages-dialog").click()
+            driver.find_element(By.ID, "view-other-showcase-pages-dialog").click()
             WebDriverWait(driver, 3).until(EC.presence_of_element_located((By.ID, 'dialog')))
 
             showcase_pages = driver.find_elements(By.CLASS_NAME, "company-showcase-pages")[1]
