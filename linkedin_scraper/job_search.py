@@ -55,7 +55,7 @@ class JobSearch(Scraper):
                 if not area_name:
                     continue
                 area_results = []
-                for job_posting in area.find_elements_by_class_name("jobs-job-board-list__item"):
+                for job_posting in area.find_elements(By.CLASS_NAME, "jobs-job-board-list__item"):
                     job = self.scrape_job_card(job_posting)
                     area_results.append(job)
                 setattr(self, area_name, area_results)
