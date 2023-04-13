@@ -247,7 +247,7 @@ class Person(Scraper):
 
     def get_about(self):
         try:
-            about = self.driver.find_element(By.ID, ("about").find_element(By.XPATH, "..").find_element(By.CLASS_NAME, "display-flex").text
+            about = self.driver.find_element(By.ID, "about").find_element(By.XPATH, "..").find_element(By.CLASS_NAME, "display-flex").text
         except NoSuchElementException :
             about=None
         self.about = about
