@@ -110,7 +110,7 @@ class Person(Scraper):
         url = os.path.join(self.linkedin_url, "details/experience")
         self.driver.get(url)
         self.focus()
-        main = self.wait_for_element_to_load(by=By.ID, name="main")
+        main = self.wait_for_element_to_load(by=By.TAG_NAME, name="main")
         self.scroll_to_half()
         self.scroll_to_bottom()
         main_list = self.wait_for_element_to_load(name="pvs-list", base=main)
